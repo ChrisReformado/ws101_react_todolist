@@ -1,34 +1,167 @@
-.navbar {
-  background-color: #000000;
-  padding: 1rem;
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
+body{
+  background-image:linear-gradient(to left, #F3E5AB, #252525);
 }
-  
-  
-.navbar li {
-  display: inline;
+
+.App {
+  text-align: center;
 }
-  
-.navbar a {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  padding: 14px 20px;
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
-  
-.navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-@media screen and (max-width: 414px) {
-  .navbar {
-    flex-direction: column;
-      align-items: center;
-    }
-  
-  .navbar a {
-    padding: 10px;
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
   }
 }
-  
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.Todo{
+	background-color: #EDEADE;
+	margin: 20px auto 0 auto;
+	width: 45%;
+
+
+
+	padding: 20px 10px;
+	border-radius: 5px 5px 0px 0px;
+}
+
+.Todo .theme{
+  text-align: center;
+}
+.theme span{
+	font-size: 1.2em;
+}
+
+.theme span:nth-child(2){
+	color: grey;
+}
+
+.Form{
+  margin: 0 auto;
+
+	width: fit-content;
+
+
+	background-color: #252525;
+
+	display: flex;
+}
+
+.Form input{
+  font-size: 1.4em;
+	margin: 0;
+}
+
+.Form input[type="text"]{
+	line-height: 50px;
+	width: 500px;
+}
+
+.Form input[type="button"]{
+	height: 55px;
+	width: 10%;
+}
+
+
+.TodoItem{
+  background-color: whitesmoke;
+	padding: 15px;
+	margin-top: 20px;
+
+	border-radius: 5px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	border-left:5px solid black;
+	transition: .3s;
+
+	box-shadow: 5px 10px 5px 1px #e5e4e2;
+}
+
+.TodoItem:hover{
+  border-left: 10px solid green;
+}
+
+.TodoItem button{
+	border-color: transparent;
+	background-color: #3ef83e;
+	height: 50px;
+	width: 50px;
+	border-radius: 5px;
+	transition: .2s;
+}
+
+.TodoItem button:hover{
+	transform: scale(1.1);
+}
+
+.TodoItem button:active{
+	background-color: red;
+	color: whitesmoke;
+}
+
+.fontIcon{
+  float: left;
+}
+
+
+.Details{
+	background-color: black;
+	color: whitesmoke;
+	height: 20px;
+	width: 95%;
+	margin: 20px auto;
+	padding: 20px 10px;
+
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	border-radius: 0px 0px 5px 5px;
+}
+
+.Details .task{
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.Details .task i{
+	font-size: 1.4em;
+}
+
+.Details .task span{
+	font-size: 1.5em;
+	font-weight: bold;
+}
